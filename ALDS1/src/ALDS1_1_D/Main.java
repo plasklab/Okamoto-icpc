@@ -9,7 +9,7 @@ public class Main {
 	public static void main(String[] main) {
 		scan = new Scanner(System.in);
 		
-		// Get the input number of array's elements.
+		// Get a value of the input array's length.
 		final int n = scan.nextInt();
 		
 		// Get the input array.

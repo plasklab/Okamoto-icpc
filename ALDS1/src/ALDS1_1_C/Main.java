@@ -6,7 +6,7 @@ public class Main {
 	
 	static Scanner scan;
 	
-	public static boolean judgePN(int a) {
+	public static boolean judgePN(int a) { // Prime Number
 		if (a == 1) return false;
 		
 		int quotient = a;
@@ -23,10 +23,10 @@ public class Main {
 	public static void main(String[] args) {
 		scan = new Scanner(System.in);
 		
-		// Get the number of the input list
+		// Get a value of the input array's length
 		final int n = scan.nextInt();
 		
-		// Get figures of the input list
+		// Get the input array.
 		int list[] = new int[n];
 		for(int i = 0; i < n; i++) {
 			list[i] = scan.nextInt();

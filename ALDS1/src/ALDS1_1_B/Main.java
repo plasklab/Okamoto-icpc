@@ -6,13 +6,15 @@ public class Main {
 	static Scanner scan;
 	
 	public static int GCD(int a, int b) {
+		// swap
 		if(a < b) {
 			int tmp = a;
 			a = b;
 			b = tmp;
 		}
-		int cd = a % b; // common divisor
 		
+		// Calculate the GCD of a & b
+		int cd = a % b; // common divisor
 		while(cd != 0) {
 			a = b;
 			b = cd;
@@ -29,7 +31,7 @@ public class Main {
 		final int x = scan.nextInt();
 		final int y = scan.nextInt();
 		
-		// Output the greatest common divisor of x and y
+		// Output the Greatest Common Divisor of x and y
 		System.out.println(GCD(x, y));
 	}
 }
