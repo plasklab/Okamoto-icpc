@@ -8,7 +8,7 @@ public class Main {
 	
 	public static int[] InsertionSort(int[] input, int length) {
 		for(int i = 1; i <= length - 1; i++) {
-			printArray(input, length);
+			printArray(input, length); // debug
 			
 			int key = input[i];
 			int j = i - 1;
@@ -17,10 +17,8 @@ public class Main {
 				input[j + 1] = input[j];
 				j--;
 			}
-			
 			input[j + 1] = key;
 		}
-		
 		return input;
 	}
 	
@@ -28,25 +26,25 @@ public class Main {
 		for(int i = 0; i < length - 1; i++) {
 			System.out.print(array[i] + " ");
 		}
-		
 		System.out.println(array[length - 1]);
 	}
 	
 	public static void main(String[] args) {
 		scan = new Scanner(System.in);
 		
-		// Get a value of input array's length
+		// Get a value of the input array's length.
 		final int Length = scan.nextInt();
 		
-		// Get a input array
+		// Get the input array.
 		int Array[] = new int[Length];
-
 		for(int i = 0; i < Length; i++) {
 			Array[i] = scan.nextInt();
 		}
 		
+		// Carry out the insertion sort.
 		Array = InsertionSort(Array, Length);
+		
+		// Output the sorted array.
 		printArray(Array, Length);
 	}
-
 }
