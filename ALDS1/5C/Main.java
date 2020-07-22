@@ -24,7 +24,7 @@ class Main {
 
         double ux = (t.x - s.x) * Math.cos(th) -
                             (t.y - s.y) * Math.sin(th) + s.x;
-        double uy = (t.x - s.x) * Math.sin(th) -
+        double uy = (t.x - s.x) * Math.sin(th) +
                             (t.y - s.y) * Math.cos(th) + s.y;
         Point u = new Point(ux, uy);
 
