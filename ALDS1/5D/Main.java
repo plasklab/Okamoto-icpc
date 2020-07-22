@@ -4,9 +4,11 @@ class Main {
 
     static Scanner sc;
     static int[] input;
+    static long count;
     static final int INF = Integer.MAX_VALUE;
 
     public static void main(String[] args) {
+        count = 0;
         sc = new Scanner(System.in);
         int n = sc.nextInt();
 
@@ -14,23 +16,20 @@ class Main {
         for(int i = 0; i < n; i++) {
             input[i] = sc.nextInt();
         }
-        long res = MergeSort(0, n);
-        System.out.println(res);
+        MergeSort(0, n);
+        System.out.println(count);
     }
 
-    static long MergeSort(int left, int right) {
-        long v1, v2, v3;
+    static void MergeSort(int left, int right) {
         if(left+1 < right) {
             int mid = (left + right) / 2;
-            v1 = MergeSort(left, mid);
-            v2 = MergeSort(mid, right);
-            v3 = Merge(left, mid, right);
-            return v1+v2+v3;
-        } else return 0;
+            MergeSort(left, mid);
+            MergeSort(mid, right);
+            Merge(left, mid, right);
+        }
     }
 
-    static long Merge(int left, int mid, int right) {
-        long count = 0;
+    static void Merge(int left, int mid, int right) {
         int n1 = mid - left;
         int n2 = right - mid;
         int[] L = new int[n1+1];
@@ -54,6 +53,5 @@ class Main {
                 count += n1 - i;
             }
         }
-        return count;
     }
 }
